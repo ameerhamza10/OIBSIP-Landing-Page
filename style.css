@@ -1,0 +1,850 @@
+
+:root{
+    --btn-color:#02c8ff;
+    --hover: #36dac9;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#navbar-toggle{
+    display: none;
+}
+
+.navbar-burger{
+    display: none;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.3em 2em ;
+}
+nav h1 i{
+    margin-right: 0.2em;
+}
+nav ul{
+display: flex;
+transition: color 0.3s ease;
+
+}
+nav ul li{
+    list-style: none;
+    margin:0 1em;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: 0.6s;
+    font-size: 1.23em;
+}
+
+nav ul li:hover{
+border-bottom: 2px solid black;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover{
+    color: rgb(134, 130, 130);
+}
+
+@media screen and (max-width:700px) {
+
+    nav{
+        background-color: var(--btn-color);        
+        padding: 2em 1em ;
+    }
+    nav ul{
+        display: none;
+        position: absolute;
+        top: 7em;
+        left: 0em;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: var(--hover);
+        border-radius: 5em;
+        border: 2px solid black;
+        outline: #02c8ff;
+    }
+    nav ul li{
+        margin: 1.2em 0;
+        padding: 0.5em 0 ;
+    }
+
+    nav ul li:hover{
+        border-bottom: 1px solid rgb(219, 211, 211);
+    }
+    #navbar-toggle{
+        display: none;
+        cursor: pointer;
+    }
+    .navbar-burger{
+        display: block;
+        order: 1;
+    }
+    #navbar-toggle:checked + ul{
+        display: block;
+        height: 85%;
+    }
+}
+
+
+@media screen and (min-width:310px) and (max-width:370px){
+    #navbar-toggle:checked + ul{
+        width: 100%;
+        height: 60%;
+    }
+}
+#hero{
+    width: 100%;
+    padding: 2.5em;
+    display: flex;
+    background-color: rgba(16, 245, 168, 0.411);
+}
+#hero img{
+    width: 50%;
+    height: 30%;
+}
+#left{
+    width: 50%;
+    padding: 5em;
+}
+
+
+#left h2{
+    letter-spacing: 0.1em;
+font-size: 2em;
+color: rgba(0, 139, 139, 0.884);
+margin: 0.1em 0;
+}
+
+#left h1{
+font-size: 2.7em;
+margin: 0.4em 0;
+}
+
+#left p{
+    font-size: 1.3em;
+    text-align: justify;
+    color: slategray;
+    margin-top: 2em;
+}
+
+#hero-btn{
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5em;
+    margin-top: 3em;
+    padding: 0 1em;
+}
+#hero-btn input{
+    border: none;
+    outline: none;
+    font-size: 1.01em;
+}
+#hero-btn button{
+padding: 1em 3em;
+border: none;
+outline: none;
+background-color:var(--btn-color);
+border-radius: 5em;
+transition: 0.5s;
+box-sizing: border-box;
+color: rgb(54, 55, 56);
+font-weight: bolder;
+letter-spacing: 0.1em;
+}
+
+#hero-btn button:hover{
+    background-color: white;
+    border:3px solid var(--hover);
+}
+@media screen and (max-width:800px) {
+#hero{
+    padding: 1em 0;
+}
+#hero img{
+    padding: 4em 0;
+    width: 50%;
+}
+}
+ 
+@media screen and (max-width:1200px){
+
+#left h1 br{
+display: none;
+}
+#left h1{
+    font-size: 1.8em;
+}
+#hero-btn{
+    width: 120%;
+}
+
+
+
+@media screen and (min-width:330px) and (max-width:370px){
+    nav h1 br{
+        display: none;
+    }
+    #hero-btn button{
+        padding: 0.8em 2em;
+    }
+    nav ul{
+        top: 5em;
+        height: 50%;
+    }
+    nav ul li{
+        margin: 1em 0;
+    }
+}
+
+@media screen and (max-width:700px) {
+ 
+    nav ul{
+        height: 100%;
+    }
+    #left h1 br{
+        display: none;
+    }
+    #hero{
+        flex-wrap: wrap;
+        padding: 1em 0;
+
+    }
+    #left{
+        width: 100%;
+        padding: 1em;
+    }
+    #hero img{
+        width: 100%;
+    }
+    #hero-btn{
+        width: 100%;
+        height: 15%;
+    }
+
+    #left p{
+        margin-bottom: 2em;
+    }
+}
+
+@media screen and (max-width:330px){
+    #hero-btn{
+        justify-content: center;
+        width: 100%;
+        height: 10%;
+        padding: 2em 0;
+    }
+    #hero-btn button{
+        margin: 1em 0;
+        padding: 0.8em 2em;
+    }
+}
+
+@media screen and  (min-width:390px) and (max-width:700px){
+    
+    #navbar-toggle:checked + ul{    
+        height: 60%;
+        
+    }
+}
+
+#prdouct-features{
+    width: 100%;
+    height: 100vh;
+    margin: 2em 0;
+}
+
+#prdouct-features > h1,#prdouct-features > p,#works > h1,#works > p,#pricing > h1,#pricing > p, #help h1,#help p,#team h1,#team p,#blog h1,#blog p,#contact h1,#contact p{
+    text-align: center;
+    margin: 1em 0;
+    
+}
+#prdouct-features h1,#works h1,#pricing > h1,#help > h1,#team h1,#blog h1,#contact h1{
+    margin: 1em 0;
+    font-size: 2em;
+    text-transform: capitalize;
+}
+#prdouct-features p, #works p,#pricing > p,#help p,#team p,#blog p,#contact p{
+    font-size: 1.2em;
+    line-height: 1.4em;
+    color: slategray;
+}
+
+#works > h1{
+    margin-top: 2.5em;
+}
+#product-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1em;
+    column-gap: 1em;
+    text-align: center;
+    margin-top: 1em;
+    padding: 1em 5em;
+    background-color: rgb(232, 236, 240);
+}
+.card{
+    margin: 0 2em;
+}
+
+.card i{
+font-size: 2.5em;
+margin-top: 1em;
+background-color: rgba(127, 255, 212, 0.582);
+border-radius: 50%;
+padding: 0.3em;
+transition: 0.4s;
+}
+
+.card i:hover{
+    cursor: pointer;
+    background-color: rgb(7, 248, 168);
+    transform: scale(1.2);
+
+}
+.card h3{
+    margin: 1em 0;
+    text-transform: capitalize;
+}
+
+.card p{
+    margin-bottom: 1em;
+    color: slategray;
+}
+
+@media screen and (max-width:700px){
+
+    #product-card{
+        grid-template-columns: 1fr;
+    }
+    .card{
+        width: 100%;
+        margin: 0;
+    }
+    #prdouct-features{
+        height: 100%;
+    }
+}
+
+#works{
+    margin-top: 2em;
+    width: 100%;
+}
+
+.work-body{
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 5em;
+    
+    background-color: rgb(232, 236, 240);
+}
+.work-body section{
+    width: 50%;
+    padding: 1.4em;
+}
+
+@media screen and (max-width:700px){
+    #works{
+        margin: 0;
+    }
+    .work-body section{
+        width: 100%;
+        padding: 1em;
+    }
+    .work-body{
+        flex-wrap: wrap;
+        margin: 1em;
+    }
+    .work-body img{
+        width: 100%;
+    }
+}
+
+#creative{
+    display: flex;
+    padding: 8em;
+    background-color: rgb(232, 236, 240);
+    
+}
+
+#creative-section{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+#creative-section h1{
+font-size: 2.5em;
+margin-bottom: 0.5em;
+}
+
+#creative-section p{
+font-size: 1.2em;
+color: slategray;
+margin-bottom: 0.5em;
+text-align: justify;
+line-height: 1.3em;
+}
+
+#creative-section button{
+    padding: 1em 1.6em;
+    margin-top: 2em;
+background-color:var(--btn-color);
+    outline: none;
+    border: none;
+    transition: 0.2s;
+    border-radius: 1em;
+    font-size: 1em;
+    color: white;
+    font-weight: bolder;
+    transition: 0.4s;
+}
+
+#creative-section button:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid var(--hover);
+    cursor: pointer;
+
+}
+
+#creative-section-text{
+display: flex;
+}
+
+#creative-second-div{
+    padding-left: 2em;
+}
+
+
+#creative-section-text div h2,#team-section-text div h2{
+    margin-bottom: 0.5em;
+    font-size: 1.9em;
+}
+
+#creative-section-text div span,#team-section-text div span{
+    font-size: 1.4em;
+    color: slategray;
+}
+
+#creative-img{
+    width: 100%;
+    text-align: end;
+}
+#creative-img img{
+    width: 80%;
+}
+
+#card-head{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.pricing-card{
+    width: 25%;
+    background-color: rgb(232, 236, 240);
+    margin: 1em;
+    padding: 1em;
+    border-radius: 2em;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+   
+@media screen and (max-width:700px) {
+    #creative-section h1{
+        font-size: 1.8em;
+    }
+    .pricing-card{
+        width: 100%;
+    }
+
+    #card-head{
+flex-wrap: wrap;
+    }
+
+    #creative{
+        padding: 2em;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+#creative-section{
+    width: 100%;
+}
+
+}
+#creative-img img{
+    width: 100%;
+}
+
+#creative-img{
+    width: 100%;
+    margin-top: 4em;
+}
+}
+
+
+.pricing-card:hover{
+    transform: scale(1.04);
+    background-color: rgb(196, 206, 216);
+}
+
+.pricing-card > h1, .pricing-card > h3{
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+.pricing-card > h1{
+    font-size: 1.7em;
+}
+.pricing-card > h3{
+    font-size: 3em;
+}
+
+.pricing-card > h3 sub{
+    font-size: 0.5em;
+}
+
+.pricing-card-body{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em;
+}
+
+
+.pricing-card-body div h3{
+    margin: 1em 0;
+}
+
+
+.pricing-card-body div h3 i{
+    background-color: aquamarine;
+    border-radius: 2em;
+    font-size: 0.6em;
+    padding: 0.4em;
+    margin-right: 1em;
+
+}
+.pricing-card button{
+    padding: 1em 2em;
+    width: 100%;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+background-color:var(--btn-color);
+    font-size: 1em;
+    font-weight: bolder;
+    transition: 0.4s;
+}
+
+.pricing-card button:hover{
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid var(--hover);
+    outline: 2px solid var(--hover);
+
+}
+
+
+#team-section-text{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+#team-section-text div h2{
+    text-align: center;
+}
+#img-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3em;
+    margin: 3em 5em;
+    background-color: rgb(232, 236, 240);
+}
+
+#team{
+    padding: 2em 0;
+}
+
+.img-team{
+    margin: 5em 0;
+    padding: 0 3em;
+    width: 100%;
+}
+
+
+.img-team img{
+    border: 2px solid slategray;
+    padding: 0.5em;
+    width: 100%;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.img-team img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+.img-team h2{
+    margin: 0.6em 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.img-team h3{
+    font-size: 1.1em;
+    text-align: center;
+    color: slategray;
+}
+
+@media screen and (max-width:700px) {
+    #team-section-text{
+        width: 100%;
+        flex-direction: column;
+    }
+.team-div{
+    text-align: center;
+    margin: 1em 0;
+}
+    #img-container{
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+    }
+    .img-team{
+        margin: 2.5em 0;
+    }
+}
+
+#blog-card-head{
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+padding: 2em 0;
+background-color: rgb(228, 233, 238);
+}
+
+.blog-card{
+    width: 25%;
+    border: 1px solid rgb(66, 75, 83);
+    background-color: rgb(197, 208, 219);
+    transition:0.5s ;
+}
+
+.blog-card:hover{
+    transform: scale(1.04);
+    background-color: rgb(183, 211, 240);
+    cursor: pointer;
+}
+
+.img-blog{
+    width: 100%;
+    height: 50%;
+    border-radius: 2em;
+}
+.blog-card .img-blog img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2em;
+    transition: 0.6s;
+}
+.blog-card img:hover{
+    transform: scale(1.1);
+}
+
+.blog-card div h2{
+    padding: 0.2em 0;
+    font-size: 1.4em;
+
+}
+
+.blog-card{
+    border-radius: 2em;
+}
+
+.blog-card div button{
+padding: 1.4em 2.3em;
+border-radius: 1em;
+border: none;
+outline: none;
+background-color:var(--btn-color);
+margin: 1em 0;
+transition: 0.5s;
+}
+
+
+.blog-card div button:hover{
+    background-color: white;
+    border: 3px solid var(--hover);
+    cursor: pointer;
+}
+.blog-card div {
+    align-content: flex-start;
+    padding: 1em;
+}
+
+@media screen and (max-width:700px) {
+    .blog-card{
+        width: 80%;
+        margin: 1em 0;
+        padding-bottom: 2em;
+    }
+    
+}
+
+
+#contact-body{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5em 0;
+    background-color: rgb(203, 211, 219);
+
+}
+
+
+#contact-form{
+    width: 50%;
+}
+
+#name,#email{
+    padding: 0.5em 1em;
+    width: 45%;
+    height: 18%;
+    border: none;
+    margin: 0.3em;
+    border-radius: 0.4em;
+    font-size: 1em;
+}
+
+
+
+#contact-text h4{
+    padding: 1em;
+}
+
+#contact-text h4 i{
+    padding-right: 0.4em;
+}
+
+#subject{
+    padding: 0.5em 1em;
+    width: 93%;
+    height: 18%;
+    border: none;
+    /* margin: 0.3em; */
+    border-radius: 0.4em;
+    font-size: 1em;
+    margin: 1em 0;
+}
+
+#message{
+    border-radius: 0.3em;
+    font-size: 1em;
+    padding: 1em;
+    border: none;
+    margin: 1em 0;
+}
+
+#contact-form button{
+padding: 1em 2em;
+border-radius: 0.4em;
+border: none;
+outline: none;
+background-color:var(--btn-color);
+transition: 0.4s;
+}
+
+#contact-form button:hover{
+    background-color: white;
+    border: 3px solid var(--hover);
+    cursor: pointer;
+}
+@media screen and (max-width:700px) {
+
+    #contact-body{
+        padding: 7em 0;
+    }
+    #contact-body{
+        flex-wrap: wrap;
+    }   
+    #contact-form{
+        width: 90%;
+    
+    }
+
+    #subject{
+        width: 100%;
+        height: 15%;
+    }
+    
+    #name,#email{
+        width: 100%;
+        height: 15%;
+        margin: 1em 0;
+    }
+    #message{
+        width: 100%;
+    }
+}
+
+footer{
+    padding: 3em;
+    text-align: center;
+    background-color: rgb(29, 31, 31);
+    height: 35vh;
+    color: slategray;
+}
+#footer-links a{
+margin: 2em 1em;
+font-size: 1.7em;
+color: slategray;
+}
+
+#footer-links a:hover{
+    color: rgb(0, 132, 255);
+}
+footer h3{
+    padding: 1em 0;
+}
+
+#footer-condition{
+    margin: 1.5em 0;
+}
+#footer-condition a{
+    text-decoration: none;
+    font-size: 1.4em;
+    margin: 0em 1.7em;
+    color: slategrey;
+}
+
+@media screen and (max-width:700px) {
+    footer{
+        height: 40%;
+    }
+    #footer-links a{
+        margin: 0.5em;
+    }
+
+    #footer-condition a{
+       display: block;
+    }
+
+}
