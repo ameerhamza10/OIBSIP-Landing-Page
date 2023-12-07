@@ -369,7 +369,7 @@ transition: 0.4s;
 }
 
 #creative-section{
-    width: 50%;
+    width: 70%;
     box-sizing: border-box;
 }
 
@@ -428,11 +428,12 @@ display: flex;
 }
 
 #creative-img{
-    width: 100%;
+    width: 50%;
     text-align: end;
 }
 #creative-img img{
-    width: 60%;
+    width: 10%;
+    padding: 1em 6em ;
 }
 
 #card-head{
@@ -475,6 +476,9 @@ flex-wrap: wrap;
     width: 100%;
 }
 
+#creative-img img{
+    padding: 1em 0;
+}
 }
 #creative-img img{
     width: 100%;
